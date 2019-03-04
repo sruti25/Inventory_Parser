@@ -8,3 +8,5 @@ For this question, I have made the following assumptions:
 
 3. So this are the classes we need: the parent fileReader class, child classes like fileReaderForCSV (which parses the CSV files); fileReaderForXML (which parses the XML files); fileReaderForTabDelimited (which parses the tab delimited files) etc. All these 3 classes will inherit the fileReader Class. We also need a main class which will be the entry point of our app.
 
+    IMPLEMENTATION DETAIL:
+      the fileReader class will have the following fields, the productId and pdtQuantity. We will have a BufferedReader class which will read the lines of a particular file. We will read each line of the file one by one. Now here we will have a function say called parseSpecificFileType. This function will be overriden and implemented in the child fileReaderForCSV classes. For csv type files, we will delimit by ",". For other specific file types, we will delimit accordingly and apply the appropriate logic.
